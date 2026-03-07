@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSVP — Julia & John</title>
+  <meta name="description" content="RSVP for Julia & John's wedding on September 8, 2026 in Emilia-Romagna, Italy." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Julia & John</a>
+      <ul class="nav-links">
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="wedding-details.html">Wedding Details</a></li>
+        <li><a href="travel-guide.html">Travel Guide</a></li>
+        <li><a href="registry.html">Registry</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer">
+    <a href="rsvp.html">RSVP</a>
+    <a href="wedding-details.html">Wedding Details</a>
+    <a href="travel-guide.html">Travel Guide</a>
+    <a href="registry.html">Registry</a>
+  </div>
+
+  <div class="page-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <p class="section-label">You're Invited</p>
+      <h1>RSVP</h1>
+      <p>Chiesa della Beata Vergine Assunta &nbsp;·&nbsp; September 8, 2026 at 4:00 PM</p>
+    </div>
+
+    <!-- RSVP Form -->
+    <section>
+      <div class="container">
+        <div class="rsvp-wrap">
+
+          <div class="rsvp-deadline">
+            <p><strong>Please RSVP by July 1, 2026.</strong> We need final headcounts for the venue and catering — your timely response is greatly appreciated.</p>
+          </div>
+
+          <p class="form-intro">
+            We're so excited to celebrate with you in Italy! Please fill out the form below for each member of your party.
+            If you have any questions, don't hesitate to reach out directly.
+          </p>
+
+          <!-- Success message (hidden until submission) -->
+          <div id="rsvp-success" style="display:none; text-align:center; padding: 3rem 2rem;">
+            <div class="ornament">✦ ✦ ✦</div>
+            <h3 style="font-style:italic; margin: 1rem 0;">Thank you!</h3>
+            <p style="color: var(--text-light); font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.7;">
+              Your RSVP has been received. We can't wait to celebrate with you in Italy.
+              We'll be in touch with any updates as the date approaches.
+            </p>
+          </div>
+
+          <form
+            id="rsvp-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+
+            <!-- Guest Names -->
+            <div class="form-group">
+              <label class="form-label" for="names">Full Name(s) of Guests</label>
+              <textarea
+                id="names"
+                name="names"
+                class="form-control"
+                rows="3"
+                placeholder="Jane Smith&#10;John Smith"
+                required
+              ></textarea>
+              <p class="form-hint">Please list one name per line if submitting for multiple guests.</p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="you@example.com"
+                required
+              />
+              <p class="form-hint">We'll use this to send you any updates before the wedding.</p>
+            </div>
+
+            <!-- Attendance -->
+            <div class="form-group">
+              <label class="form-label">Will you be attending the ceremony?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="attending" value="yes" required />
+                  <span>Yes, I'll be there! 🎉</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="attending" value="no" />
+                  <span>Regretfully unable to attend</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Hotel -->
+            <div class="form-group">
+              <label class="form-label">Hotel Accommodation</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="hotel" value="yes" />
+                  <span>Yes, I'd like to book at the Amati Design Hotel ($120/night)</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="hotel" value="no" />
+                  <span>No, I'll arrange my own accommodations</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="hotel" value="unsure" />
+                  <span>Not sure yet</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dietary -->
+            <div class="form-group">
+              <label class="form-label" for="dietary">Dietary Restrictions or Allergies</label>
+              <input
+                type="text"
+                id="dietary"
+                name="dietary"
+                class="form-control"
+                placeholder="e.g. vegetarian, gluten-free, nut allergy"
+              />
+              <p class="form-hint">Leave blank if none — we'll do our best to accommodate everyone.</p>
+            </div>
+
+            <!-- Notes -->
+            <div class="form-group">
+              <label class="form-label" for="notes">Anything Else? Questions, Notes, or Well-Wishes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                class="form-control"
+                rows="4"
+                placeholder="Say whatever's on your heart..."
+              ></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send RSVP</button>
+              <p class="form-note">
+                Having trouble with the form? Email us directly at
+                <a href="mailto:mowreypabstwedding@gmail.com">mowreypabstwedding@gmail.com</a>
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section style="background: var(--cream); padding: 4rem 2rem; text-align: center;">
+      <div style="max-width: 540px; margin: 0 auto;">
+        <p class="section-label">A Note from Us</p>
+        <p style="font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: var(--text-light); line-height: 1.8;">
+          Whether you can make it to Italy or not, your prayers, love, and positive thoughts
+          mean more to us than we can say. Thank you for being part of our story.
+        </p>
+        <p style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--brown); margin-top: 1rem;">
+          — Julia & John
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /.page-content -->
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-names">Julia & John</p>
+    <p class="footer-date">September 8, 2026 &nbsp;·&nbsp; Emilia-Romagna, Italy</p>
+    <ul class="footer-links">
+      <li><a href="rsvp.html">RSVP</a></li>
+      <li><a href="wedding-details.html">Wedding Details</a></li>
+      <li><a href="travel-guide.html">Travel Guide</a></li>
+      <li><a href="registry.html">Registry</a></li>
+    </ul>
+    <p class="footer-copy">Made with love &nbsp;·&nbsp; Mowrey &amp; Pabst, 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
