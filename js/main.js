@@ -65,17 +65,6 @@ if (countdownEl) {
   setInterval(updateCountdown, 1000);
 }
 
-// --- Conditional pasta class field ---
-const attendingRadios = document.querySelectorAll('input[name="attending"]');
-const pastaGroup = document.getElementById('pasta-class-group');
-if (attendingRadios.length && pastaGroup) {
-  attendingRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      pastaGroup.style.display = radio.value === 'yes' ? 'block' : 'none';
-    });
-  });
-}
-
 // --- RSVP form (Formspree placeholder) ---
 const rsvpForm = document.getElementById('rsvp-form');
 if (rsvpForm) {
